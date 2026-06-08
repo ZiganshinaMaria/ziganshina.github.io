@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="icon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <title>Интерактивная викторина</title>
+</head>
+<body>
+  <button id="theme-toggle" class="theme-btn" type="button">
+    <i class="fa-solid fa-moon"></i>
+    Тёмная тема
+  </button>
+
+  <main class="quiz">
+    <header class="hero">
+      <h1><i class="fa-solid fa-code"></i> Интерактивная викторина</h1>
+      <h3>Проверьте свои знания основных тегов, атрибутов и возможностей HTML.</h3>
+    </header>
+
+    <section id="start-screen" class="card">
+      <p><i class="fa-solid fa-book-open icon"></i> Ответьте на 10 вопросов и узнайте свой результат.</p>
+      <p><i class="fa-solid fa-trophy icon"></i> Лучший результат: <strong id="best-score">0</strong></p>
+      <button id="start-btn" type="button">
+        <i class="fa-solid fa-play"></i>
+        Начать
+      </button>
+    </section>
+
+    <section id="quiz-screen" class="card hidden">
+      <div class="top">
+        <span id="question-count"></span>
+        <span><i class="fa-solid fa-star"></i> Баллы: <strong id="score">0</strong></span>
+      </div>
+
+      <div class="progress">
+        <div id="progress-bar"></div>
+      </div>
+
+      <h2 id="question"></h2>
+      <p id="question-hint" class="question-hint"></p>
+
+      <div id="answers" class="answers"></div>
+
+      <button id="check-btn" class="hidden" type="button">
+        <i class="fa-solid fa-check"></i>
+        Проверить ответ
+      </button>
+      <button id="next-btn" class="hidden" type="button">
+        Следующий вопрос
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </section>
+
+    <section id="result-screen" class="card hidden">
+      <h2><i class="fa-solid fa-award"></i> Результат</h2>
+      <p id="result-text"></p>
+      <p>Лучший результат: <strong id="final-best-score">0</strong></p>
+
+      <h3><i class="fa-solid fa-clock-rotate-left"></i> История прохождений</h3>
+      <ul id="results-list"></ul>
+
+      <button id="clear-history-btn" type="button"><i class="fa-solid fa-trash"></i> Очистить историю</button>
+
+      <button id="restart-btn" type="button">
+        <i class="fa-solid fa-rotate-right"></i>
+        Пройти заново
+      </button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
